@@ -35,6 +35,10 @@ npm-debug.log
 #mobile
 index.ios.js
 index.android.js
+android/.gradle
+android/app/build/
+android/build
+
 
 #web-examples
 web-examples/assets/
