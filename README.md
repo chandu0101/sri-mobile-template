@@ -33,20 +33,22 @@ npm install
 npm start
 ```
 
-##### Mac
+#### Mac
 
 -> `brew install watchman`
 
 -> `npm install -g react-native-cli`
 
-#####  iOS
+**iOS**
+
 Open  `ios/SriMobileTemplate.xcodeproj` in xcode(> 6.3) and hir run button
 
-##### Android
+**Android**
+
 Follow this guide : https://facebook.github.io/react-native/docs/android-setup.html
 
 in mobile-examples folder run `react-native run-android`
 
-##### Windows and Linux
+#### Windows and Linux
 
 http://suyogkc.com.np/react-native-for-windowslinux/
