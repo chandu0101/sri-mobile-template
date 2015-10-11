@@ -1,6 +1,13 @@
 # Sri Mobile Template
 
-# React Native Playground
+Sri mobile app skeleton
+
+![stimobile](srimobile.png)
+
+
+# How To Run
+
+### React Native Playground
 
 ```scala
 
@@ -14,7 +21,7 @@
 
 2) Replace content of index.io.js and index.android.js files with content from files that are generated using sbt ~fullOptMobile
 
-# Simulator/Device 
+### Simulator/Device
 
 -> Install Node.js 4.0 or greater using [nvm](https://github.com/creationix/nvm#installation)
 
@@ -26,7 +33,7 @@ npm install
 npm start
 ```
 
-## Mac
+##### Mac
 
 -> `brew install watchman`
 
@@ -40,6 +47,6 @@ Follow this guide : https://facebook.github.io/react-native/docs/android-setup.h
 
 in mobile-examples folder run `react-native run-android`
 
-## Windows and Linux
+##### Windows and Linux
 
 http://suyogkc.com.np/react-native-for-windowslinux/
