@@ -4,7 +4,7 @@ import sri.core.ReactElement
 import sri.mobile.examples.components.HelloSriMobile
 import sri.universal.components.View
 import sri.universal.router._
-import sri.universal.styles.SriStyleSheet
+import sri.universal.styles.UniversalStyleSheet
 
 
 object AppRouter {
@@ -18,7 +18,7 @@ object AppRouter {
     override val notFound: (StaticPage, NavigatorRoute) = initialRoute
 
     override def renderScene(route: NavigatorRoute): ReactElement = {
-      View(style = SriStyleSheet.wholeContainer)(
+      View(style = UniversalStyleSheet.wholeContainer)(
         super.renderScene(route)
       )
     }
