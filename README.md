@@ -7,8 +7,6 @@ Sri mobile app skeleton
 
 # How To Run
 
-### React Native Playground
-
 ```scala
 
  sbt ~fullOptMobile
@@ -20,6 +18,8 @@ Sri mobile app skeleton
  // this will generate index.ios.js and index.android.js files
  
 ```
+
+### React Native Playground
 
 1) go to https://rnplay.org/ ->  Signin  -> NewApp -> name it as `SriMobileTemplate`
 
