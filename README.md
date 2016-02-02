@@ -12,6 +12,10 @@ Sri mobile app skeleton
 ```scala
 
  sbt ~fullOptMobile
+   
+     or 
+ 
+ sbt ~fastOptMobile ( make sure you have this one line fix : https://github.com/facebook/react-native/pull/4830/files )
  
  // this will generate index.ios.js and index.android.js files
  
@@ -41,7 +45,11 @@ npm start
 
 **iOS**
 
-Open  `ios/SriMobileTemplate.xcodeproj` in xcode(> 6.3) and hir run button
+`react-native run-ios`
+
+or
+
+Open  `ios/SriMobileTemplate.xcodeproj` in xcode(> 6.3) and hit the run button.
 
 **Android**
 
