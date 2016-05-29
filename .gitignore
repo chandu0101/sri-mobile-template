@@ -38,6 +38,7 @@ index.android.js
 android/.gradle
 android/app/build/
 android/build
+scalajs-output.js
 
 
 #web-examples

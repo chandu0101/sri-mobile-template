@@ -10,7 +10,7 @@ object MobileApp extends JSApp {
 
   def main() = {
 
-    val root = createMobileRoot(
+    val root = createReactNativeRoot(
       AppRouter.router
     )
     ReactNative.AppRegistry.registerComponent("SriMobileTemplate", () => root)
