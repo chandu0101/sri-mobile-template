@@ -55,7 +55,7 @@ Open  `ios/SriMobileTemplate.xcodeproj` in xcode(> 6.3) and hit the run button.
 
 Follow this guide : https://facebook.github.io/react-native/docs/android-setup.html
 
-in mobile-examples folder run `react-native run-android`
+run `react-native run-android`
 
 #### Windows and Linux
 

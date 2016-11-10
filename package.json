@@ -1,12 +1,23 @@
 {
   "name": "SriMobileTemplate",
-  "version": "0.3.0",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "node_modules/react-native/packager/packager.sh",
+    "test": "jest"
   },
   "dependencies": {
-    "react-native": "0.24.0",
-    "react": "0.14.7"
+    "react": "15.3.2",
+    "react-native": "0.37.0"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "devDependencies": {
+    "babel-jest": "17.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "jest": "17.0.0",
+    "jest-react-native": "17.0.0",
+    "react-test-renderer": "15.3.2"
   }
 }

@@ -6,9 +6,9 @@ name := "sri-mobile-template"
 
 scalaVersion := "2.11.8"
 
-val sriVersion = "0.5.0"
+val sriVersion = "0.6.0"
 
-libraryDependencies ++= Seq("com.github.chandu0101.sri" %%% "mobile" % sriVersion)
+libraryDependencies ++= Seq("com.github.chandu0101" %%% "sri-mobile" % sriVersion)
 
 val fastOptMobile = Def.taskKey[File]("Generate mobile output file for fastOptJS")
 

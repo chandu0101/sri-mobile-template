@@ -38,9 +38,8 @@ object HelloSriMobile {
 
   }
 
-  val ctor = getTypedConstructor(js.constructorOf[Component], classOf[Component])
 
-  def apply() = createElementNoProps(ctor)
+  def apply() = makeElement[Component]
 
 }
 
