@@ -13,7 +13,7 @@ Sri mobile app skeleton
    
      or 
  
- sbt ~fastOptMobile ( make sure you have this one line fix : https://github.com/facebook/react-native/pull/4830/files )
+ sbt ~fastOptMobile 
  
  // this will generate index.ios.js and index.android.js files
  
