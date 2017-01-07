@@ -5,7 +5,7 @@ name := "sri-mobile-template"
 
 scalaVersion := "2.11.8"
 
-val sriVersion = "0.7.0"
+val sriVersion = "0.7.1"
 
 libraryDependencies ++= Seq("com.github.chandu0101" %%% "sri-mobile" % sriVersion)
 
