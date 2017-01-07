@@ -1,4 +1,4 @@
-package sri.mobile.examples.components
+package sri.mobile.template.components
 
 import sri.core.ElementFactory._
 import sri.core.ReactComponent

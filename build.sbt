@@ -1,4 +1,3 @@
-import LauncherConfigs._
 
 enablePlugins(ScalaJSPlugin)
 
@@ -6,28 +5,34 @@ name := "sri-mobile-template"
 
 scalaVersion := "2.11.8"
 
-val sriVersion = "0.6.0"
+val sriVersion = "0.7.0"
 
 libraryDependencies ++= Seq("com.github.chandu0101" %%% "sri-mobile" % sriVersion)
 
+
+
+scalaJSModuleKind := ModuleKind.CommonJSModule
+
+/** ================ React_native task   ================ */
+
+val SJS_OUTPUT_PATH = "assets/scalajs-output.js"
+
 val fastOptMobile = Def.taskKey[File]("Generate mobile output file for fastOptJS")
 
-val fullOptMobile = Def.taskKey[File]("Generate the file given to react native")
 
+artifactPath in Compile in fastOptJS :=
+  baseDirectory.value / SJS_OUTPUT_PATH
 artifactPath in Compile in fastOptMobile :=
   baseDirectory.value / "index.ios.js"
 fastOptMobile in Compile := {
+  (artifactPath in Compile in fastOptMobile).value.delete()
   val outFile = (artifactPath in Compile in fastOptMobile).value
 
-  val loaderFile = (resourceDirectory in Compile).value / "loader.js"
+  val fastoptOutputCode = IO.read((fastOptJS in Compile).value.data)
 
-  IO.copyFile(loaderFile, outFile)
+  val outString = fastoptOutputCode.replace("this[\"__ScalaJSExportsNamespace\"] = $e;", "") //TODO we don't need this in scala.js 0.6.15
 
-  val fullOutputCode = IO.read((fastOptJS in Compile).value.data)
-
-  val outString = processRequireFunctionsInFastOpt(fullOutputCode)
-
-  IO.write(baseDirectory.value / "scalajs-output.js", outString)
+  IO.write(baseDirectory.value / SJS_OUTPUT_PATH, outString)
 
   val launcher = (scalaJSLauncher in Compile).value.data.content
   IO.append(outFile, launcher)
@@ -36,20 +41,22 @@ fastOptMobile in Compile := {
   outFile
 }
 
+
+val fullOptMobile = Def.taskKey[File]("Generate mobile output file for fullOptJS")
+
+
+artifactPath in Compile in fullOptJS :=
+  baseDirectory.value / SJS_OUTPUT_PATH
 artifactPath in Compile in fullOptMobile :=
   baseDirectory.value / "index.ios.js"
 fullOptMobile in Compile := {
+  (artifactPath in Compile in fullOptMobile).value.delete()
+
   val outFile = (artifactPath in Compile in fullOptMobile).value
 
-  val loaderFile = (resourceDirectory in Compile).value / "loader.js"
+  val fulloptOutputCode = IO.read((fullOptJS in Compile).value.data)
 
-  IO.copyFile(loaderFile, outFile)
-
-  val fullOutputCode = IO.read((fullOptJS in Compile).value.data)
-
-  val outString = processRequireFunctions(fullOutputCode)
-
-  IO.write(baseDirectory.value / "scalajs-output.js", outString)
+  IO.write(baseDirectory.value / SJS_OUTPUT_PATH, fulloptOutputCode)
 
   val launcher = (scalaJSLauncher in Compile).value.data.content
   IO.append(outFile, launcher)

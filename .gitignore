@@ -23,8 +23,7 @@ project/plugins/project/
 #mac
 .DS_Store
 
-#project
-examples/js/
+
 
 #node
 
@@ -32,20 +31,12 @@ node_modules/
 npm-debug.log
 
 
-#mobile
+#project
 index.ios.js
 index.android.js
 android/.gradle
 android/app/build/
 android/build
-scalajs-output.js
-
-
-#web-examples
-web-examples/assets/
-web-examples/node_modules/
-
-
-#relay-web-examples
-relay-web-examples/assets/
-relay-web-examples/node_modules/
+ios/build
+assets/scalajs-output.js
+assets/scalajs-output.js.map

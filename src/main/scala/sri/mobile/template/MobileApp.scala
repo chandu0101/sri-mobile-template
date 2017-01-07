@@ -1,8 +1,8 @@
-package sri.mobile.examples
+package sri.mobile.template
 
 import sri.mobile.ReactNative
 import sri.mobile.all._
-import sri.mobile.examples.router.AppRouter
+import sri.mobile.template.router.AppRouter
 import scala.scalajs.js.JSApp
 
 
